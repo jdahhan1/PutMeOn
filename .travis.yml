@@ -10,7 +10,7 @@ env:
 
 script:
         - make all_tests
-        - gem install faraday -v 1.8.0
+        - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
 
 deploy:
         - provider: heroku
